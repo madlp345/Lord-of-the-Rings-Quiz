@@ -1,0 +1,22 @@
+#body{
+    background: url(../images/door-stretching-into-fantasy-world.jpg) no-repeat;
+    background-size: 100%;    
+}
+.container{
+    position: relative;
+    margin: 0px auto;
+    width: 75%;
+    min-height: 100%;
+    padding: 15px;
+}
+.capas{
+    margin-top: 120px;
+}
+
+.capas h1{
+    color: #fff;
+    font-size: 52px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+

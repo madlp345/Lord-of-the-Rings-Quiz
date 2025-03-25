@@ -1,30 +1,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="content-type" content="text/html" />
-	<meta name="author" content="lolkittens" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="author" content="lolkittens">
+    <meta http-equiv="content-type" content="text/html">
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <title>Quiz</title>
 </head>
 <body id="body">
-    <center>
-        <div class="container capas">
-            <!---First question to choose difficulty-->
-            <div class="col-12" id="Pregunta0" style="display: ;">
-                <div class="col-6 Pregunta"  >
-                    <br /><br /><h1 >Lord of the Rings Quiz</h1>
-                    <button type="button" onclick="siguiente('Pregunta0','from1')" class="btn btn-circle btn-primary">Easy difficulty</button>
-                    <button type="button" onclick="siguiente('Pregunta0','from2')"class="btn btn-circle btn-primary">Hard difficulty</button>
-                </div>
+    <div class="container capas" style="text-align: center;">
+        <!-- First question to choose difficulty -->
+        <div class="col-12" id="Pregunta0" style="display: block;">
+            <div class="col-6 Pregunta">
+                <br><br><h1>Lord of the Rings Quiz</h1>
+                <button type="button" onclick="siguiente('Pregunta0','from1')" class="btn btn-circle btn-primary">Easy difficulty</button>
+                <button type="button" onclick="siguiente('Pregunta0','from2')" class="btn btn-circle btn-primary">Hard difficulty</button>
             </div>
-
         </div>
-    </center>
+    </div>
 </body>
 </html>
