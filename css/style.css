@@ -1,5 +1,5 @@
 #body{
-    background: url(../images/door-stretching-into-fantasy-world.jpg) no-repeat;
+    background: url("assets/images/door-stretching-into-fantasy-world.jpg") no-repeat;
     background-size: 100%;    
 }
 .container{
