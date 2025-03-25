@@ -1,5 +1,5 @@
 #body{
-    background: url("assets/images/door-stretching-into-fantasy-world.jpg") no-repeat;
+    background: url(../images/door-stretching-into-fantasy-world.jpg) no-repeat;
     background-size: 100%;    
 }
 .container{
@@ -93,5 +93,68 @@ color: #fff;
 .capas{
     margin-top: 10%;
 }
+
+
+.capas h1{
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.Pregunta h2{
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+ font-weight: 500;
+ }
+.container .col-6{
+    width: 88%; 
+     float: inherit;
+     margin: 0px auto;
+     padding: 15px;
+}
+.Pregunta{
+    border: 1px solid #000; 
+    background: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    min-height: 400px;
+    color: #fff;
+}
+.Pregunta h1{
+    margin-top: 30px;
+}
+.btn-primary{
+    margin-bottom: 20px;
+    width: 80%;
+    color: #fff;
+    font-size: 15px;
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.btn-primary:hover{
+   transform: scaleX(1.05);    
+  transform: scaleY(1.05);     
+  transform: scale(1.05);  
+  background: #fff;
+  color: #000;   
+}
+.score{
+         position: relative;
+         font-size: 18px;
+         right: 10px;
+         float: right;
+         font-weight: 400;   
+}
+.siguiente{ 
+    background: #fff;
+    color: #333;
+}
+.siguiente:hover{ 
+     background: rgba(255,255,255,0.2);
+color: #fff;
+}
+
 
 }
