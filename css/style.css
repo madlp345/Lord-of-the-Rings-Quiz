@@ -12,7 +12,7 @@ body {
     position: relative;
     margin: 0 auto;
     width: 90%;
-    max-width: 1200px; /* Prevents it from stretching too much */
+    max-width: 1200px; 
     min-height: 100vh;
     padding: 20px;
     display: flex;
@@ -24,7 +24,7 @@ body {
 /* How to play text */
 .how-to-play {
     text-align: center;
-    font-size: 2rem;  /* Responsive font */
+    font-size: 2rem;  
     color: #fff;
     margin-bottom: 20px;
 }
@@ -157,4 +157,60 @@ body {
     .score {
         font-size: 1rem;
     }
+}
+/* High Scores Page Styling */
+.highscores-box {
+    background: rgba(0, 0, 0, 0.8); 
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Style for the high score table */
+#tablaPuntajes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Table headers */
+#tablaPuntajes th {
+    background: rgba(255, 255, 255, 0.2); 
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: 1px solid white;
+}
+
+/* Table rows */
+#tablaPuntajes td {
+    background: rgba(255, 255, 255, 0.1); 
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid white;
+}
+
+/* Buttons Styling */
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Make buttons match the quiz */
+.btn-primary {
+    width: auto;
+    max-width: 200px;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Scores</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+    <body>    
+        <div class="container">
+            <h1 class="how-to-play">🏆 High Scores 🏆</h1>
+
+            <div class="highscores-box">
+                <table id="tablaPuntajes">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Scores will be inserted here -->
+                    </tbody>
+                </table>
+
+                <div class="button-group">
+                    <button class="btn-primary" onclick="clearScores()">Clear Scores</button>
+                    <button class="btn-primary" onclick="window.location.href='index.html'">Go Back</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

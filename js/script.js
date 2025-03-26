@@ -1,7 +1,10 @@
+
 var list_repuesta=['A','B','C','D'];
 var repuestas_facil=['','B','D','A','B','C','B','D','B','C','D'];                      
 var repuestas_dificil=[  '','C','A','B','A','B','A','C','B','C','B'];                     
 var score=0;
+
+
 function siguiente(o,m){
     document.getElementById(o).style.display="none";
     document.getElementById(m).style.display="";
@@ -32,17 +35,54 @@ function Repuesta(p,r,o){
         }
 } 
 function quitar_evento(b){
-   $(b).removeAttr("onclick");
-   $(b).css({"cursor":"no-drop"});  
-}
-function volver(){
-    location.reload();
-}
-function Enviar(){
-    if (document.getElementById("nombre").value==""){
-        return true;
+    $(b).removeAttr("onclick");
+    $(b).css({"cursor":"no-drop"});  
+ }
+ function volver(){
+     location.reload();
+ }
+ function Enviar() { 
+    let nombre = document.getElementById("nombre").value;
+    let puntaje = document.getElementById("puntajeFinal").textContent;
+
+    if (nombre.trim() === "") {
+        alert("Please enter a name!");
+        return;
     }
-     alert(document.getElementById("nombre").value+" tu puntuacion ha sido enviada con exito");
-     volver()
-    
+
+    // Get existing scores from localStorage or initialize an empty array
+    let scores = JSON.parse(localStorage.getItem("highscores")) || [];
+
+    // Add new score
+    scores.push({ nombre, puntaje });
+
+    // Save updated scores back to localStorage
+    localStorage.setItem("highscores", JSON.stringify(scores));
+
+    // Show confirmation
+    alert(nombre + ", your score has been submitted successfully!");
+
+    // Clear input field
+    document.getElementById("nombre").value = "";
 }
+//High scores code
+function loadScores() {
+    let scores = JSON.parse(localStorage.getItem("highscores")) || [];
+    let tbody = document.querySelector("#tablaPuntajes tbody");
+    tbody.innerHTML = "";
+
+    scores.forEach((score, index) => {
+        let row = tbody.insertRow();
+        row.insertCell(0).textContent = index + 1;
+        row.insertCell(1).textContent = score.nombre;
+        row.insertCell(2).textContent = score.puntaje;
+    });
+}
+
+function clearScores() {
+    localStorage.removeItem("highscores");
+    loadScores();
+}
+
+// Load scores when the page loads
+window.onload = loadScores;
