@@ -46,7 +46,11 @@ function quitar_evento(b){
     let puntaje = document.getElementById("puntajeFinal").textContent;
 
     if (nombre.trim() === "") {
-        alert("Please enter a name!");
+        Swal.fire({
+            icon: "warning",
+            title: "Oops...",
+            text: "Please enter a name!"
+        });
         return;
     }
 
@@ -59,12 +63,19 @@ function quitar_evento(b){
     // Save updated scores back to localStorage
     localStorage.setItem("highscores", JSON.stringify(scores));
 
-    // Show confirmation
-    alert(nombre + ", your score has been submitted successfully!");
+    // Show confirmation with SweetAlert2
+    Swal.fire({
+        icon: "success",
+        title: "Score Submitted!",
+        text: `${nombre}, your score has been submitted successfully!`,
+        confirmButtonColor: "#3085d6",
+        confirmButtonText: "OK"
+    });
 
     // Clear input field
     document.getElementById("nombre").value = "";
 }
+
 //High scores code
 function loadScores() {
     let scores = JSON.parse(localStorage.getItem("highscores")) || [];
