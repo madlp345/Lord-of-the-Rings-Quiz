@@ -1,165 +1,160 @@
-#body{
-    background: url(../images/door-stretching-into-fantasy-world.jpg) no-repeat;
-    background-size: 100%;    
+/* General Styles */
+body {
+    background: url(../images/door-stretching-into-fantasy-world.jpg) no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
-.container{
+
+/* Centering the content */
+.container {
     position: relative;
-    margin: 0px auto;
-    width: 75%;
-    min-height: 100%;
-    padding: 15px;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px; /* Prevents it from stretching too much */
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.capas{
-    margin-top: 120px;
-}
+
+/* How to play text */
 .how-to-play {
     text-align: center;
-    font-size: 30px;
+    font-size: 2rem;  /* Responsive font */
     color: #fff;
     margin-bottom: 20px;
 }
-.capas h1{
+
+/* Title */
+.capas h1 {
     color: #fff;
-    font-size: 52px;
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
-.Pregunta h2{
-    color: #fff;
-    font-size: 28px;
-    text-align: center;
- font-weight: 500;
- }
-.container .col-6{
-    width: 70%; 
-     float: inherit;
-     margin: 0px auto;
-     padding: 15px;
-}
-.Pregunta{
-    border: 1px solid #000; 
-    background: rgba(0,0,0,0.8);
+
+/* Quiz Questions */
+.Pregunta {
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     min-height: 400px;
     color: #fff;
-}
-.Pregunta h1{
-    margin-top: 30px;
-}
-.btn-primary{
-    margin-bottom: 20px;
+    padding: 20px;
     width: 80%;
+    text-align: center;
+}
+
+.Pregunta h2 {
     color: #fff;
-    font-size: 25px;
-    background: rgba(255,255,255,0.2);
-    padding: 10px;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* Buttons */
+.btn-primary {
+    margin-bottom: 15px;
+    width: 90%;
+    max-width: 400px;
+    color: #fff;
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
     border-radius: 20px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
 }
-.btn-primary:hover{
-   transform: scaleX(1.05);    
-  transform: scaleY(1.05);     
-  transform: scale(1.05);  
-  background: #fff;
-  color: #000;   
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    background: #fff;
+    color: #000;
 }
-.score{
-         position: relative;
-         font-size: 28px;
-         right: 10px;
-         float: right;
-         font-weight: 400;   
+
+/* Score */
+.score {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: right;
+    color: white;
 }
-.siguiente{ 
+
+/* Next Button */
+.siguiente {
     background: #fff;
     color: #333;
 }
-.siguiente:hover{ 
-     background: rgba(255,255,255,0.2);
+
+.siguiente:hover {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
 }
 
-@media (max-width: 400px) {
-    
- #body{
-    background: url(../images/door-stretching-into-fantasy-world.jpg) no-repeat;
-    background-size: auto 100%;
-    background-position: center top; 
-    height: 900px;   
+/* RESPONSIVE DESIGN */
+
+/* Small Screens (Tablets & Small Laptops) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .how-to-play {
+        font-size: 1.8rem;
+    }
+
+    .capas h1 {
+        font-size: 2.5rem;
+    }
+
+    .Pregunta {
+        width: 90%;
+    }
+
+    .Pregunta h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+
+    .score {
+        font-size: 1.3rem;
+    }
 }
 
-.container{
-    position: relative;
-    margin: 0px auto;
-    width: 100%;
-    min-height: 100%;
-    padding: 1%;
-}
-.capas{
-    margin-top: 10%;
-}
+/* Mobile Screens */
+@media (max-width: 480px) {
+    .how-to-play {
+        font-size: 1.5rem;
+    }
 
+    .capas h1 {
+        font-size: 2rem;
+    }
 
-.capas h1{
-    color: #fff;
-    font-size: 25px;
-    text-align: center;
-    margin-bottom: 40px;
-}
-.Pregunta h2{
-    color: #fff;
-    font-size: 18px;
-    text-align: center;
- font-weight: 500;
- }
-.container .col-6{
-    width: 88%; 
-     float: inherit;
-     margin: 0px auto;
-     padding: 15px;
-}
-.Pregunta{
-    border: 1px solid #000; 
-    background: rgba(0,0,0,0.8);
-    border-radius: 10px;
-    min-height: 400px;
-    color: #fff;
-}
-.Pregunta h1{
-    margin-top: 30px;
-}
-.btn-primary{
-    margin-bottom: 20px;
-    width: 80%;
-    color: #fff;
-    font-size: 15px;
-    background: rgba(255,255,255,0.2);
-    padding: 10px;
-    border-radius: 20px;
-    cursor: pointer;
-}
-.btn-primary:hover{
-    transform: scaleX(1.05);    
-    transform: scaleY(1.05);     
-    transform: scale(1.05);  
-    background: #fff;
-    color: #000;   
-}
-.score{
-         position: relative;
-         font-size: 18px;
-         right: 10px;
-         float: right;
-         font-weight: 400;   
-}
-.siguiente{ 
-    background: #fff;
-    color: #333;
-}
-.siguiente:hover{ 
-     background: rgba(255,255,255,0.2);
-    color: #fff;
-}
+    .Pregunta {
+        width: 100%;
+        padding: 15px;
+    }
 
+    .Pregunta h2 {
+        font-size: 1.2rem;
+    }
 
+    .btn-primary {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .score {
+        font-size: 1rem;
+    }
 }
