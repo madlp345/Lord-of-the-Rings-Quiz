@@ -12,10 +12,17 @@
 </head>
 <body id="body">
     <div class="container capas" style="text-align: center;">
+        
         <!-- First question to choose difficulty -->
         <div class="col-12" id="Pregunta0" style="display: block;">
             <div class="col-6 Pregunta">
                 <br><br><h1>Lord of the Rings Quiz</h1>
+                <div class="how-to-play">
+                    <p>Welcome!</p>
+                    <p>Answer 10 questions correctly to test your knowledge of Lord of the Rings!</p>
+                    <p>Each correct answer gives you 10 points.</p>
+                    <p>Select your difficulty to begin:</p>
+                </div>
                 <button type="button" onclick="siguiente('Pregunta0','from1')" class="btn btn-circle btn-primary">Easy difficulty</button>
                 <button type="button" onclick="siguiente('Pregunta0','from2')" class="btn btn-circle btn-primary">Hard difficulty</button>
             </div>
@@ -24,7 +31,7 @@
         <div class="col-12" id="from1" style="display: none;">
 
             <!--1st question-->
-            <div class="col-12" id="Pregunta11" style="display: none;" >
+            <div class="col-12" id="Pregunta11" style="display:" >
                 <div class="col-6 Pregunta" >
                     <div class="col-12">
                         <span class="score">Question 1/10 <strong>Score</strong> <span id="Puntaje11">0</span></span>
@@ -199,7 +206,7 @@
         <!--Start of hard difficulty-->
         <div class="col-12" id="from2" style="display: none;">
             <!--- 1st Question ---->
-            <div class="col-12" id="Pregunta21" style="display: none;" >
+            <div class="col-12" id="Pregunta21" style="display: " >
                 <div class="col-6 Pregunta" >
                 <div class="col-12">
                     <span class="score">Question 1/10 <strong>Score</strong> <span id="Puntaje12">0</span></span>
@@ -379,7 +386,7 @@
                         <h2>Congratulations on completing the quiz!</h2>
                         <h2>Enter the participant's name <br />and save your information.</h2>
                     </div>
-                    <input class=" btn-primary" id="nombre" style="background: #fff; color: #333; text-align: center;" placeholder="Nombre del equipo"  />
+                    <input class=" btn-primary" id="nombre" style="background: #fff; color: #333; text-align: center;" placeholder="Name"  />
                     <button type="button" onclick="Enviar();" class="btn btn-circle btn-primary">Send</button>
                     <button type="button" onclick="volver();" class="btn btn-circle btn-primary">Play again</button>
                 </div>

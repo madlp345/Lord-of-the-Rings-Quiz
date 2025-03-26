@@ -32,17 +32,17 @@ function Repuesta(p,r,o){
         }
 } 
 function quitar_evento(b){
-    $(b).removeAttr("onclick");
-    $(b).css({"cursor":"no-drop"});  
- }
- function volver(){
-     location.reload();
- }
- function Enviar(){
-     if (document.getElementById("nombre").value==""){
-         return true;
-     }
-      alert(document.getElementById("nombre").value+" tu puntuacion ha sido enviada con exito");
-      volver()
-     
- }
+   $(b).removeAttr("onclick");
+   $(b).css({"cursor":"no-drop"});  
+}
+function volver(){
+    location.reload();
+}
+function Enviar(){
+    if (document.getElementById("nombre").value==""){
+        return true;
+    }
+     alert(document.getElementById("nombre").value+" tu puntuacion ha sido enviada con exito");
+     volver()
+    
+}
