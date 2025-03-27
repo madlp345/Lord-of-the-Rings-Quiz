@@ -63,3 +63,88 @@ As the pages of the site have a background image, the color scheme was kept mini
 
 ### Imagery
 As the website is a quiz based on the Middle-earth, I wanted to use one of the art inspired by the books. 
+
+### Wireframes
+Wireframes were created for mobile, tablet and desktop using balsamiq.
+![Menu](images/)
+
+---
+
+## Features
+
+### Existing Features
+
+
+### Future Features
+
+
+---
+
+## Testing
+
+### Challenges & Solutions
+
+
+### Validator Testing
+- **HTML Validator**: 
+![Menu](images/)
+- **CSS Validator**: 
+![Menu](images/)
+- **Lighthouse Accessibility Score**: <br>
+![Menu](images/)
+- **Cross-Browser Testing**: 
+- **No broken links** 
+
+## Manual Testing
+
+
+
+
+### Unfixed Bugs
+
+
+---
+
+## Technologies Used
+
+### Programming Languages
+- HTML5
+- CSS
+- JavaScript
+
+### Frameworks, Libraries & Tools
+- **Google Fonts** – Tinos font.
+- **Font Awesome** – Icons for navbar and footer.
+- **GitPod/CodeAnywhere** – Development environment.
+- **GitHub** – Repository hosting.
+- **Am I Responsive?** – Responsive design testing.
+- **Balsamiq** – Wireframe design.
+
+---
+
+## Deployment
+
+The site was deployed to **GitHub Pages**.
+
+### Deployment Steps
+1. Navigate to the **GitHub repository** and go to the **Settings** tab.
+2. On the left-hand side menu, go to **Pages**.
+3. Under **Build and Deployment**, select **Main Branch**.
+4. Once selected, the page refreshes, and a ribbon displays the **successful deployment** message.
+5. **Live link:** [Lord of the Rings Quiz](https://madlp345.github.io/Lord-of-the-Rings-Quiz/index.html)
+
+---
+
+## Credits
+
+
+
+### Code
+- Mentor **Jubril Akolade** recommended using Bootstrap.
+
+### Media
+- All images were provided by the restaurant owner:
+  - **Juan Jose Currea**
+  - **Email**: casablancacapital@outlook.com
+
+---
