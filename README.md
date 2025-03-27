@@ -50,7 +50,7 @@ The Lord of the Rings Quiz was created for fans of J.R.R. Tolkien’s legendary 
 ## Design
 
 ### Color Scheme
-![Coolors Palette](images/coolors.png)
+![Coolors Palette](images/amiresponsive.png)
 
 As the pages of the site have a background image, the color scheme was kept minimal to avoid overwhelming users. White, and shades of grey create a minimalist aesthetic, ensuring readability and contrast.
 

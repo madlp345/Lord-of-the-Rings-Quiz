@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    background: url(../images/door-stretching-into-fantasy-world.jpg) no-repeat center center fixed;
+    background: url(../assets/images/door-stretching-into-fantasy-world.jpg) no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -23,6 +23,13 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.dsb {
+    display: block;
+}
+
+.dsn {
+    display: none;
 }
 
 /* How to play text */
@@ -106,7 +113,6 @@ a {
     color: #fff;
 }
 
-/* RESPONSIVE DESIGN */
 
 /* Small Screens (Tablets & Small Laptops) */
 @media (max-width: 768px) {

@@ -13,7 +13,7 @@
     <!-- Imports jQuery library -->
     <script src="js/jquery.min.js"></script>
     <!-- Links the JavaScript -->
-    <script src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
     <!-- Imports SweetAlert2 library -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--- Font import-->
@@ -23,11 +23,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Lord of the Rings Quiz</title>
 </head>
-<body id="body">
+<body>
     <div class="container capas" style="text-align: center;">
         
         <!-- First question to choose difficulty -->
-        <div class="col-12" id="Pregunta0" style="display: block;">
+        <div class="col-12" id="Pregunta0" class="dsb">
             <div class="col-6 Pregunta">
                 <br><br><h1>Lord of the Rings Quiz</h1>
                 <div class="how-to-play">
@@ -36,376 +36,395 @@
                     <p>Each correct answer gives you 10 points.</p>
                     <p>Select your difficulty to begin:</p>
                 </div>
-                <button type="button" onclick="siguiente('Pregunta0','from1')" class="btn btn-circle btn-primary">Easy difficulty</button>
-                <button type="button" onclick="siguiente('Pregunta0','from2')" class="btn btn-circle btn-primary">Hard difficulty</button>
+                <button id="easy-diff" type="button" class="btn btn-circle btn-primary">Easy difficulty</button>
+                <button id="hard-diff" type="button" class="btn btn-circle btn-primary">Hard difficulty</button>
             </div>
         </div>
         <!--Start of easy quiz-->
-        <div class="col-12" id="from1" style="display: none;">
-
-            <!--1st question-->
-            <div class="col-12" id="Pregunta11" style="display:" >
-                <div class="col-6 Pregunta" >
-                    <div class="col-12">
-                        <span class="score">Question 1/10 <strong>Score</strong> <span id="Puntaje11">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                                <div class="col-sm-12">
-                                <h2><strong>Who is the autor of the Lord of the Rings</strong>?</h2>
-                                </div>
-                                <button type="button" onclick="Repuesta('1','1','A');" id="Boton11A" class="btn btn-circle btn-primary">J.K. Rowling</button>
-                                <button type="button" onclick="Repuesta('1','1','B');" id="Boton11B" class="btn btn-circle btn-primary">J.R.R. Tolkien</button>
-                                <button type="button" onclick="Repuesta('1','1','C');" id="Boton11C" class="btn btn-circle btn-primary">George R.R. Martin</button>
-                                <button type="button" onclick="Repuesta('1','1','D');" id="Boton11D" class="btn btn-circle btn-primary">C.S. Lewis</button>
-                                <button type="button" onclick="siguiente('Pregunta11','Pregunta12');" id="next11" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>
-                </div>
-            </div>
-            <!--2nd question-->
-            <div class="col-12" id="Pregunta12" style="display: none;">
-                <div class="col-6 Pregunta" >
-                    <div class="col-12">
-                        <span class="score">Question 2/10 <strong>Score</strong> <span id="Puntaje21">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>Which of the following characters is NOT part of the Fellowship of the Ring?</h2>
-                    </div>
-                    <button type="button" onclick="Repuesta('2','1','A');" id="Boton21A" class="btn btn-circle btn-primary">Frodo Baggins</button>
-                    <button type="button" onclick="Repuesta('2','1','B');" id="Boton21B" class="btn btn-circle btn-primary">Aragorn</button>
-                    <button type="button" onclick="Repuesta('2','1','C');" id="Boton21C" class="btn btn-circle btn-primary">Legolas</button>
-                    <button type="button" onclick="Repuesta('2','1','D');" id="Boton21D" class="btn btn-circle btn-primary">Gollum</button>
-                    <button type="button" onclick="siguiente('Pregunta12','Pregunta13');" id="next21" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-               </div> 
-            </div>
-            <!--3rd question-->
-            <div class="col-12" id="Pregunta13" style="display: none;">
-                <div class="col-6 Pregunta"  >
+        <div class="col-12" id="from1" class="dsn">
+            
+        <!-- Question 1 -->
+        <div class="col-12 question" id="Pregunta11">
+            <div class="col-6 Pregunta">
                 <div class="col-12">
-                    <span class="score">Question 3/10 <strong>Score</strong> <span id="Puntaje31">0</span></span>
+                    <span class="score">Question 1/10 <strong>Score:</strong> <span id="Puntaje11">0</span></span>
                 </div>
-                <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>Which object has the power to control all <br />the other rings in The Lord of the Rings?</h2>
-                    </div>
-                    <button type="button" onclick="Repuesta('3','1','A');" id="Boton31A" class="btn btn-circle btn-primary">The One Ring</button>
-                    <button type="button" onclick="Repuesta('3','1','B');" id="Boton31B" class="btn btn-circle btn-primary">The Ring of Fire</button>
-                    <button type="button" onclick="Repuesta('3','1','C');" id="Boton31C" class="btn btn-circle btn-primary">The Ring of Wisdom</button>
-                    <button type="button" onclick="Repuesta('3','1','D');" id="Boton31D" class="btn btn-circle btn-primary">El Anillo de Poder</button>
-                    <button type="button" onclick="siguiente('Pregunta13','Pregunta14');" id="next31" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-                </div>
-            </div>
-            <!--4th question-->
-            <div class="col-12" id="Pregunta14" style="display: none;">
-                <div class="col-6 Pregunta"   >
-                    <div class="col-12">
-                        <span class="score">Question 4/10<strong>Score</strong> <span id="Puntaje41">0</span></span>
-                </div>
-                <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>Who is the ruler of Mordor?</h2>
-                    </div>
-                    <button type="button" onclick="Repuesta('4','1','A');" id="Boton41A" class="btn btn-circle btn-primary">Saruman</button>
-                    <button type="button" onclick="Repuesta('4','1','B');" id="Boton41B" class="btn btn-circle btn-primary">Sauron</button>
-                    <button type="button" onclick="Repuesta('4','1','C');" id="Boton41C" class="btn btn-circle btn-primary">The Witch King</button>
-                    <button type="button" onclick="Repuesta('4','1','D');" id="Boton41D" class="btn btn-circle btn-primary">Gollum</button>
-                    <button type="button" onclick="siguiente('Pregunta14','Pregunta15');" id="next41" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-                </div>
-            </div>
-            <!--5th question-->
-            <div class="col-12" id="Pregunta15" style="display: none;">
-                <div class="col-6 Pregunta"  >
-                    <div class="col-12">
-                        <span class="score">Question 5/10<strong>Score</strong> <span id="Puntaje51">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
                 <div class="col-sm-12">
-                    <h2>What is the homeland of Frodo Baggins?</h2>
+                    <h2><strong>Who is the author of The Lord of the Rings?</strong></h2>
                 </div>
-                    <button type="button" onclick="Repuesta('5','1','A');" id="Boton51A" class="btn btn-circle btn-primary">Rivendell</button>
-                    <button type="button"  onclick="Repuesta('5','1','B');" id="Boton51B" class="btn btn-circle btn-primary">Rohan</button>
-                    <button type="button"  onclick="Repuesta('5','1','C');" id="Boton51C"  class="btn btn-circle btn-primary">The Shire</button>
-                    <button type="button"  onclick="Repuesta('5','1','D');" id="Boton51D" class="btn btn-circle btn-primary">Gondor</button>
-                    <button type="button" onclick="siguiente('Pregunta15','Pregunta16');" id="next51" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-                </div>
+                <button class="answer-btn" data-question="1" data-answer="A">J.K. Rowling</button>
+                <button class="answer-btn" data-question="1" data-answer="B">J.R.R. Tolkien</button>
+                <button class="answer-btn" data-question="1" data-answer="C">George R.R. Martin</button>
+                <button class="answer-btn" data-question="1" data-answer="D">C.S. Lewis</button>
+                <button class="next-btn" data-current="Pregunta11" data-next="Pregunta12" class="dsn">Next</button>
             </div>
-            <!--6th question-->
-            <div class="col-12" id="Pregunta16"  style="display:none ;">
-                <div class="col-6 Pregunta"   >
-                    <div class="col-12">
-                        <span class="score">Question 6/10 <strong>Score</strong> <span id="Puntaje61">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                <div class="col-sm-12">
-                    <h2>What is the name of <br /> the Rohan horse ridden by Éomer?</h2>
-                </div>
-                    <button type="button"  onclick="Repuesta('6','1','A');" id="Boton61A"  class="btn btn-circle btn-primary">Shadowfax</button>
-                    <button type="button"  onclick="Repuesta('6','1','B');" id="Boton61B"  class="btn btn-circle btn-primary">Brego</button>
-                    <button type="button"  onclick="Repuesta('6','1','C');" id="Boton61C"   class="btn btn-circle btn-primary">Arod</button>
-                    <button type="button"  onclick="Repuesta('6','1','D');" id="Boton61D"   class="btn btn-circle btn-primary">Windfola</button>
-                    <button type="button" onclick="siguiente('Pregunta16','Pregunta17');" id="next61" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-                </div>
-            </div>
-            <!--7th question-->
-            <div class="col-12" id="Pregunta17" style="display: none;">
-                <div class="col-6 Pregunta"   >
-                    <div class="col-12">
-                        <span class="score">Question 7/10<strong>Score</strong> <span id="Puntaje71">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>Who destroys the One Ring <br /> at the end of the trilogy?</h2>
-                    </div>
-                    <button type="button"  onclick="Repuesta('7','1','A');" id="Boton71A"  class="btn btn-circle btn-primary">Frodo</button>
-                    <button type="button"  onclick="Repuesta('7','1','B');" id="Boton71B"  class="btn btn-circle btn-primary">Aragorn</button>
-                    <button type="button"  onclick="Repuesta('7','1','C');" id="Boton71C"  class="btn btn-circle btn-primary">Sam</button>
-                    <button type="button"  onclick="Repuesta('7','1','D');" id="Boton71D"  class="btn btn-circle btn-primary">Gollum</button>
-                    <button type="button" onclick="siguiente('Pregunta17','Pregunta18');" id="next71" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-                </div>
-            </div>
-            <!--8th question-->
-            <div class="col-12" id="Pregunta18"  style="display: none;">
-                <div class="col-6 Pregunta"  >
-                    <div class="col-12">
-                        <span class="score">Question 8/10<strong>Score</strong> <span id="Puntaje81">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>What does the word “Mordor” <br />mean in the Elvish language?</h2>
-                    </div>
-                    <button type="button"  onclick="Repuesta('8','1','A');" id="Boton81A" class="btn btn-circle btn-primary">Land of the dead</button>
-                    <button type="button"  onclick="Repuesta('8','1','B');" id="Boton81B" class="btn btn-circle btn-primary">Dark Land</button>
-                    <button type="button"  onclick="Repuesta('8','1','C');" id="Boton81C" class="btn btn-circle btn-primary">Red Sky</button>
-                    <button type="button"  onclick="Repuesta('8','1','D');" id="Boton81D" class="btn btn-circle btn-primary">Land of Light</button>
-                    <button type="button" onclick="siguiente('Pregunta18','Pregunta19');" id="next81" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-                </div>
-            </div>
-            <!--9th question-->
-            <div class="col-12" id="Pregunta19"  style="display: none;">
-                <div class="col-6 Pregunta"   >
-                    <div class="col-12">
-                        <span class="score">Question 9/10<strong>Score</strong> <span id="Puntaje91">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>Who is Frodo's best friend, <br /> who accompanies him to destroy the Ring?</h2>
-                    </div>
-                    <button type="button"  onclick="Repuesta('9','1','A');" id="Boton91A" class="btn btn-circle btn-primary">Merry</button>
-                    <button type="button"  onclick="Repuesta('9','1','B');" id="Boton91B" class="btn btn-circle btn-primary">Gandalf</button>
-                    <button type="button"  onclick="Repuesta('9','1','C');" id="Boton91C" class="btn btn-circle btn-primary">Sam</button>
-                    <button type="button"  onclick="Repuesta('9','1','D');" id="Boton91D" class="btn btn-circle btn-primary">Pippin</button>
-                    <button type="button" onclick="siguiente('Pregunta19','Pregunta110');" id="next91" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-                </div>
-            </div>
-            <!--10th question-->
-            <div class="col-12" id="Pregunta110"  style="display: none;">
-                <div class="col-6 Pregunta"   >
-                    <div class="col-12">
-                        <span class="score">Question 10/10<strong>Score</strong> <span id="Puntaje101">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>Which creature is known for its friendship<br /> with Gandalf and its wisdom and power?</h2>
-                    </div>
-                    <button type="button" onclick="Repuesta('10','1','A');" id="Boton101A" class="btn btn-circle btn-primary">Balrog</button>
-                    <button type="button" onclick="Repuesta('10','1','B');" id="Boton101B" class="btn btn-circle btn-primary">Phoenix</button>
-                    <button type="button" onclick="Repuesta('10','1','C');" id="Boton101C" class="btn btn-circle btn-primary">Gollum</button>
-                    <button type="button" onclick="Repuesta('10','1','D');" id="Boton101D" class="btn btn-circle btn-primary">The giant eagle (Shadowfax)</button>
-                    <button type="button" onclick="siguiente('from1','Final');" id="next101" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-                </div>
-         </div>
-
         </div>
-        <!--end of easy questions-->
-        <!--Start of hard difficulty-->
-        <div class="col-12" id="from2" style="display: none;">
-            <!--- 1st Question ---->
-            <div class="col-12" id="Pregunta21" style="display: " >
-                <div class="col-6 Pregunta" >
-                    <div class="col-12">
-                        <span class="score">Question 1/10 <strong>Score</strong> <span id="Puntaje12">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>What is Tom Bombadils full name <br /> as mentioned in the books?</h2>
-                    </div>
-                    <button type="button" onclick="Repuesta('1','2','A');" id="Boton12A" class="btn btn-circle btn-primary">Tom Bombadil, Guardian of the Old Forest </button>
-                    <button type="button" onclick="Repuesta('1','2','B');" id="Boton12B" class="btn btn-circle btn-primary">Tom Bombadil, the Old  </button>
-                    <button type="button" onclick="Repuesta('1','2','C');" id="Boton12C" class="btn btn-circle btn-primary">Iarwain Ben-adar  </button>
-                    <button type="button" onclick="Repuesta('1','2','D');" id="Boton12D" class="btn btn-circle btn-primary">Eldest and Fatherless  </button>
-                    <button type="button" onclick="siguiente('Pregunta21','Pregunta22');" id="next12" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>
-                </div>
-            </div>
 
-            <!---2nd Question ---->
-            <div class="col-12" id="Pregunta22" style="display: none;">
-                <div class="col-6 Pregunta" >
-                    <div class="col-12">
-                        <span class="score">Question 2/10 <strong>Score</strong> <span id="Puntaje22">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>What word does Gandalf use<br />  to open the gates of Moria?</h2>
-                    </div>
-                    <button type="button" onclick="Repuesta('2','2','A');" id="Boton22A" class="btn btn-circle btn-primary">Mellon </button>
-                    <button type="button" onclick="Repuesta('2','2','B');" id="Boton22B" class="btn btn-circle btn-primary">Annon</button>
-                    <button type="button" onclick="Repuesta('2','2','C');" id="Boton22C" class="btn btn-circle btn-primary">Edro</button>
-                    <button type="button" onclick="Repuesta('2','2','D');" id="Boton22D" class="btn btn-circle btn-primary">Gwaith</button>
-                    <button type="button" onclick="siguiente('Pregunta22','Pregunta23');" id="next22" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-                </div> 
-            </div>
-            <!---3rd Question ---->
-            <div class="col-12" id="Pregunta23" style="display: none;">
-                <div class="col-6 Pregunta"  >
-                    <div class="col-12">
-                        <span class="score">Question 3/10 <strong>Score</strong> <span id="Puntaje32">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>What is the true name of Mount Doom?</h2>
-                    </div>
-                    <button type="button" onclick="Repuesta('3','2','A');" id="Boton32A" class="btn btn-circle btn-primary">Barad-dûr</button>
-                    <button type="button" onclick="Repuesta('3','2','B');" id="Boton32B" class="btn btn-circle btn-primary">Orodruin</button>
-                    <button type="button" onclick="Repuesta('3','2','C');" id="Boton32C" class="btn btn-circle btn-primary">Amon Amarth</button>
-                    <button type="button" onclick="Repuesta('3','2','D');" id="Boton32D" class="btn btn-circle btn-primary">Ered Lithui</button>
-                    <button type="button" onclick="siguiente('Pregunta23','Pregunta24');" id="next32" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
+        <!-- Question 2 -->
+        <div class="col-12 question" id="Pregunta12" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 2/10 <strong>Score:</strong> <span id="Puntaje12">0</span></span>
                 </div>
-            </div>
-            <!--4th question-->
-            <div class="col-12" id="Pregunta24" style="display: none;">
-                <div class="col-6 Pregunta"   >
-                    <div class="col-12">
-                        <span class="score">Question 4/10<strong>Score</strong> <span id="Puntaje42">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>Which King of Gondor ordered the burning <br />of the royal crown and scepter, <br /> marking the temporary end of the line of kings?</h2>
-                    </div>
-                    <button type="button" onclick="Repuesta('4','2','A');" id="Boton42A" class="btn btn-circle btn-primary">Eärnur  </button>
-                    <button type="button" onclick="Repuesta('4','2','B');" id="Boton42B" class="btn btn-circle btn-primary">Eärendil  </button>
-                    <button type="button" onclick="Repuesta('4','2','C');" id="Boton42C" class="btn btn-circle btn-primary">Isildur  </button>
-                    <button type="button" onclick="Repuesta('4','2','D');" id="Boton42D" class="btn btn-circle btn-primary">Anárion  </button>
-                    <button type="button" onclick="siguiente('Pregunta24','Pregunta25');" id="next42" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>Which of the following characters is NOT part of the Fellowship of the Ring?</h2>
                 </div>
+                <button class="answer-btn" data-question="2" data-answer="A">Frodo Baggins</button>
+                <button class="answer-btn" data-question="2" data-answer="B">Aragorn</button>
+                <button class="answer-btn" data-question="2" data-answer="C">Legolas</button>
+                <button class="answer-btn" data-question="2" data-answer="D">Gollum</button>
+                <button class="next-btn" data-current="Pregunta12" data-next="Pregunta13" class="dsn">Next</button>
             </div>
-            <!--5th question-->
-            <div class="col-12" id="Pregunta25" style="display: none;">
-                <div class="col-6 Pregunta"  >
-                    <div class="col-12">
-                        <span class="score">Question 5/10 <strong>Score</strong> <span id="Puntaje52">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>What was Gollums original name <br />before being corrupted by the Ring?</h2>
-                    </div>
-                    <button type="button" onclick="Repuesta('5','2','A');" id="Boton52A" class="btn btn-circle btn-primary">Déagol  </button>
-                    <button type="button"  onclick="Repuesta('5','2','B');" id="Boton52B" class="btn btn-circle btn-primary">Smeagol  </button>
-                    <button type="button"  onclick="Repuesta('5','2','C');" id="Boton52C"  class="btn btn-circle btn-primary">Gríma  </button>
-                    <button type="button"  onclick="Repuesta('5','2','D');" id="Boton52D" class="btn btn-circle btn-primary">Gorlim  </button>
-                    <button type="button" onclick="siguiente('Pregunta25','Pregunta26');" id="next52" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-                </div>
-            </div>
-            <!--6h question-->
-            <div class="col-12" id="Pregunta26"  style="display:none ;">
-                <div class="col-6 Pregunta"   >
-                    <div class="col-12">
-                        <span class="score">Question 6/10 <strong>Score</strong> <span id="Puntaje62">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>Which Elf created the Three Elven Rings?</h2>
-                    </div>
-                    <button type="button"  onclick="Repuesta('6','2','A');" id="Boton62A"  class="btn btn-circle btn-primary">Celebrimbor  </button>
-                    <button type="button"  onclick="Repuesta('6','2','B');" id="Boton62B"  class="btn btn-circle btn-primary">Fëanor  </button>
-                    <button type="button"  onclick="Repuesta('6','2','C');" id="Boton62C"   class="btn btn-circle btn-primary">Galadriel  </button>
-                    <button type="button"  onclick="Repuesta('6','2','D');" id="Boton62D"   class="btn btn-circle btn-primary">Elrond  </button>
-                    <button type="button" onclick="siguiente('Pregunta26','Pregunta27');" id="next62" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-                </div>
-            </div>
-            <!--7th question-->
-            <div class="col-12" id="Pregunta27" style="display: none;">
-                <div class="col-6 Pregunta"   >
-                    <div class="col-12">
-                        <span class="score">Question 7/10 <strong>Score</strong> <span id="Puntaje72">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>What is the name of the dragon <br />that destroyed the city of Dale<br /> and conquered Erebor before the events of the trilogy?</h2>
-                    </div>
-                    <button type="button"  onclick="Repuesta('7','2','A');" id="Boton72A"  class="btn btn-circle btn-primary">Glaurung  </button>
-                    <button type="button"  onclick="Repuesta('7','2','B');" id="Boton72B"  class="btn btn-circle btn-primary">Ancalagon  </button>
-                    <button type="button"  onclick="Repuesta('7','2','C');" id="Boton72C"  class="btn btn-circle btn-primary">Smaug  </button>
-                    <button type="button"  onclick="Repuesta('7','2','D');" id="Boton72D"  class="btn btn-circle btn-primary">Scatha  </button>
-                    <button type="button" onclick="siguiente('Pregunta27','Pregunta28');" id="next72" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-                </div>
-            </div>
-            <!--8th question-->
-            <div class="col-12" id="Pregunta28"  style="display: none;">
-                <div class="col-6 Pregunta"  >
-                    <div class="col-12">
-                        <span class="score">Question 8/10 <strong>Score</strong> <span id="Puntaje82">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>What is Gandalfs Elvish name?</h2>
-                    </div>
-                    <button type="button"  onclick="Repuesta('8','2','A');" id="Boton82A" class="btn btn-circle btn-primary">Mithrandir  </button>
-                    <button type="button"  onclick="Repuesta('8','2','B');" id="Boton82B" class="btn btn-circle btn-primary">Olórin  </button>
-                    <button type="button"  onclick="Repuesta('8','2','C');" id="Boton82C" class="btn btn-circle btn-primary">Curunír  </button>
-                    <button type="button"  onclick="Repuesta('8','2','D');" id="Boton82D" class="btn btn-circle btn-primary">Tharkûn  </button>
-                    <button type="button" onclick="siguiente('Pregunta28','Pregunta29');" id="next82" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-                </div>
-            </div>
-            <!--9th question-->
-            <div class="col-12" id="Pregunta29"  style="display: none;">
-                <div class="col-6 Pregunta"   >
-                    <div class="col-12">
-                        <span class="score">Question 9/10 <strong>Score</strong> <span id="Puntaje92">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>What title did Théoden have besides being King of Rohan?</h2>
-                    </div>
-                    <button type="button"  onclick="Repuesta('9','2','A');" id="Boton92A" class="btn btn-circle btn-primary">Lord of the Riders  </button>
-                    <button type="button"  onclick="Repuesta('9','2','B');" id="Boton92B" class="btn btn-circle btn-primary">Protector of the Éothéod  </button>
-                    <button type="button"  onclick="Repuesta('9','2','C');" id="Boton92C" class="btn btn-circle btn-primary">Lord of the Mark  </button>
-                    <button type="button"  onclick="Repuesta('9','2','D');" id="Boton92D" class="btn btn-circle btn-primary">Guardian of the Rohirrim  </button>
-                    <button type="button" onclick="siguiente('Pregunta29','Pregunta210');" id="next92" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-                </div>
-            </div>
-            <!--10th question-->
-            <div class="col-12" id="Pregunta210"  style="display: none;">
-                <div class="col-6 Pregunta"   >
-                    <div class="col-12">
-                        <span class="score">Question 10/10 <strong>Score</strong> <span id="Puntaje102">0</span></span>
-                    </div>
-                    <br /><br /><h1 ><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
-                    <div class="col-sm-12">
-                        <h2>What is the name of the river where Isildur lost the Ring?</h2>
-                    </div>
-                    <button type="button" onclick="Repuesta('10','2','A');" id="Boton102A" class="btn btn-circle btn-primary">Celebrant  </button>
-                    <button type="button" onclick="Repuesta('10','2','B');" id="Boton102B" class="btn btn-circle btn-primary">Anduin  </button>
-                    <button type="button" onclick="Repuesta('10','2','C');" id="Boton102C" class="btn btn-circle btn-primary">Baranduin  </button>
-                    <button type="button" onclick="Repuesta('10','2','D');" id="Boton102D" class="btn btn-circle btn-primary">Bruinen  </button>
-                    <button type="button" onclick="siguiente('from2','Final');" id="next102" style="display: none;" class="btn btn-circle btn-primary siguiente">Next</button>                                         
-                </div>
-            </div>
+        </div>
 
-          </div> 
-        <div class="col-12" id="Final" style="display:none ;">
-            <div class="col-12">
-                <div class="col-6 Pregunta"   >
-                    <h2 style="font-size: 32px;">Your final score was <strong id="puntajeFinal"></strong></h2>
-                    <div class="col-sm-12">
-                        <h2>Congratulations on completing the quiz!</h2>
-                        <h2>Enter the participant's name <br />and save your information.</h2>
-                    </div>
-                    <input class=" btn-primary" id="nombre" style="background: #fff; color: #333; text-align: center;" placeholder="Name"  />
-                    <button type="button" onclick="Enviar();" class="btn btn-circle btn-primary">Send</button>
-                    <button type="button" onclick="volver();" class="btn btn-circle btn-primary">Play again</button>
-                    <button type="button" btn btn-circle btn-primary" onclick="location.href='highscores.html';">High Scores</button>
+        <!-- Question 3 -->
+        <div class="col-12 question" id="Pregunta13" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 3/10 <strong>Score:</strong> <span id="Puntaje13">0</span></span>
                 </div>
-            </div>       
-        </div>  
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>What is the name of the mountain where the One Ring was forged?</h2>
+                </div>
+                <button class="answer-btn" data-question="3" data-answer="A">Mount Doom</button>
+                <button class="answer-btn" data-question="3" data-answer="B">Lonely Mountain</button>
+                <button class="answer-btn" data-question="3" data-answer="C">Caradhras</button>
+                <button class="answer-btn" data-question="3" data-answer="D">Weathertop</button>
+                <button class="next-btn" data-current="Pregunta13" data-next="Pregunta14" class="dsn">Next</button>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="col-12 question" id="Pregunta14" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 4/10 <strong>Score:</strong> <span id="Puntaje14">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>Who was the king of Rohan during the War of the Ring?</h2>
+                </div>
+                <button class="answer-btn" data-question="4" data-answer="A">Théoden</button>
+                <button class="answer-btn" data-question="4" data-answer="B">Éomer</button>
+                <button class="answer-btn" data-question="4" data-answer="C">Denethor</button>
+                <button class="answer-btn" data-question="4" data-answer="D">Boromir</button>
+                <button class="next-btn" data-current="Pregunta14" data-next="Pregunta15" class="dsn">Next</button>
+            </div>
+        </div>
+        <!-- Question 5 -->
+        <div class="col-12 question" id="Pregunta15" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 5/10 <strong>Score:</strong> <span id="Puntaje15">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>What is the name of the realm ruled by Elrond?</h2>
+                </div>
+                <button class="answer-btn" data-question="5" data-answer="A">Rohan</button>
+                <button class="answer-btn" data-question="5" data-answer="B">Gondor</button>
+                <button class="answer-btn" data-question="5" data-answer="C">Rivendell</button>
+                <button class="answer-btn" data-question="5" data-answer="D">Mirkwood</button>
+                <button class="next-btn" data-current="Pregunta15" data-next="Pregunta16" class="dsn">Next</button>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="col-12 question" id="Pregunta16" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 6/10 <strong>Score:</strong> <span id="Puntaje16">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>What is the name of Sauron's all-seeing eye?</h2>
+                </div>
+                <button class="answer-btn" data-question="6" data-answer="A">The Eye of Sauron</button>
+                <button class="answer-btn" data-question="6" data-answer="B">The Palantír</button>
+                <button class="answer-btn" data-question="6" data-answer="C">The Red Eye</button>
+                <button class="answer-btn" data-question="6" data-answer="D">The Black Gate</button>
+                <button class="next-btn" data-current="Pregunta16" data-next="Pregunta17" class="dsn">Next</button>
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="col-12 question" id="Pregunta17" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 7/10 <strong>Score:</strong> <span id="Puntaje17">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>Which character says, "You shall not pass!"?</h2>
+                </div>
+                <button class="answer-btn" data-question="7" data-answer="A">Frodo</button>
+                <button class="answer-btn" data-question="7" data-answer="B">Gandalf</button>
+                <button class="answer-btn" data-question="7" data-answer="C">Aragorn</button>
+                <button class="answer-btn" data-question="7" data-answer="D">Saruman</button>
+                <button class="next-btn" data-current="Pregunta17" data-next="Pregunta18" class="dsn">Next</button>
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="col-12 question" id="Pregunta18" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 8/10 <strong>Score:</strong> <span id="Puntaje18">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>What is the name of Aragorn's sword?</h2>
+                </div>
+                <button class="answer-btn" data-question="8" data-answer="A">Glamdring</button>
+                <button class="answer-btn" data-question="8" data-answer="B">Andúril</button>
+                <button class="answer-btn" data-question="8" data-answer="C">Sting</button>
+                <button class="answer-btn" data-question="8" data-answer="D">Narsil</button>
+                <button class="next-btn" data-current="Pregunta18" data-next="Pregunta19" class="dsn">Next</button>
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="col-12 question" id="Pregunta19" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 9/10 <strong>Score:</strong> <span id="Puntaje19">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>Which race does Legolas belong to?</h2>
+                </div>
+                <button class="answer-btn" data-question="9" data-answer="A">Dwarf</button>
+                <button class="answer-btn" data-question="9" data-answer="B">Hobbit</button>
+                <button class="answer-btn" data-question="9" data-answer="C">Elf</button>
+                <button class="answer-btn" data-question="9" data-answer="D">Man</button>
+                <button class="next-btn" data-current="Pregunta19" data-next="Pregunta110" class="dsn">Next</button>
+            </div>
+        </div>
+
+        <!-- Question 10 (Final Question) -->
+        <div class="col-12 question" id="Pregunta110" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 10/10 <strong>Score:</strong> <span id="Puntaje110">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>Which creature is known for its friendship with Gandalf and its wisdom and power?</h2>
+                </div>
+                <button class="answer-btn" data-question="10" data-answer="A">Balrog</button>
+                <button class="answer-btn" data-question="10" data-answer="B">Phoenix</button>
+                <button class="answer-btn" data-question="10" data-answer="C">Gollum</button>
+                <button class="answer-btn" data-question="10" data-answer="D">The giant eagle (Shadowfax)</button>
+                <button class="next-btn" data-current="Pregunta110" data-next="Final" class="dsn">Next</button>
+            </div>
+        </div>
+
+    </div>
+        
+        
+        
+    
+    <!-- Start of Hard Difficulty -->
+    <div class="col-12" id="from2" class="dsn">
+        <!-- 1st Question -->
+        <div class="col-12" id="Pregunta21">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 1/10 <strong>Score</strong> <span id="Puntaje12">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>What is Tom Bombadil’s full name as mentioned in the books?</h2>
+                </div>
+                <button type="button" class="answer-btn" data-question="1" data-difficulty="2" data-answer="A" id="Boton12A">Tom Bombadil, Guardian of the Old Forest</button>
+                <button type="button" class="answer-btn" data-question="1" data-difficulty="2" data-answer="B" id="Boton12B">Tom Bombadil, the Old</button>
+                <button type="button" class="answer-btn" data-question="1" data-difficulty="2" data-answer="C" id="Boton12C">Iarwain Ben-adar</button>
+                <button type="button" class="answer-btn" data-question="1" data-difficulty="2" data-answer="D" id="Boton12D">Eldest and Fatherless</button>
+                <button type="button" class="next-btn" data-current="Pregunta21" data-next="Pregunta22" id="next12" class="dsn">Next</button>
+            </div>
+        </div>
+
+        <!-- 2nd Question -->
+        <div class="col-12" id="Pregunta22" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 2/10 <strong>Score</strong> <span id="Puntaje22">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>What word does Gandalf use to open the gates of Moria?</h2>
+                </div>
+                <button type="button" class="answer-btn" data-question="2" data-difficulty="2" data-answer="A" id="Boton22A">Mellon</button>
+                <button type="button" class="answer-btn" data-question="2" data-difficulty="2" data-answer="B" id="Boton22B">Annon</button>
+                <button type="button" class="answer-btn" data-question="2" data-difficulty="2" data-answer="C" id="Boton22C">Edro</button>
+                <button type="button" class="answer-btn" data-question="2" data-difficulty="2" data-answer="D" id="Boton22D">Gwaith</button>
+                <button type="button" class="next-btn" data-current="Pregunta22" data-next="Pregunta23" id="next22" class="dsn">Next</button>
+            </div>
+        </div>
+
+        <!-- 3rd Question -->
+        <div class="col-12" id="Pregunta23" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 3/10 <strong>Score</strong> <span id="Puntaje32">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>What is the true name of Mount Doom?</h2>
+                </div>
+                <button type="button" class="answer-btn" data-question="3" data-difficulty="2" data-answer="A" id="Boton32A">Barad-dûr</button>
+                <button type="button" class="answer-btn" data-question="3" data-difficulty="2" data-answer="B" id="Boton32B">Orodruin</button>
+                <button type="button" class="answer-btn" data-question="3" data-difficulty="2" data-answer="C" id="Boton32C">Amon Amarth</button>
+                <button type="button" class="answer-btn" data-question="3" data-difficulty="2" data-answer="D" id="Boton32D">Ered Lithui</button>
+                <button type="button" class="next-btn" data-current="Pregunta23" data-next="Pregunta24" id="next32" class="dsn">Next</button>
+            </div>
+        </div>
+        <!-- 4th Question -->
+        <div class="col-12" id="Pregunta24" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 4/10 <strong>Score</strong> <span id="Puntaje42">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>Which of these is NOT one of the three Elven Rings of Power?</h2>
+                </div>
+                <button type="button" class="answer-btn" data-question="4" data-difficulty="2" data-answer="A" id="Boton42A">Vilya</button>
+                <button type="button" class="answer-btn" data-question="4" data-difficulty="2" data-answer="B" id="Boton42B">Nenya</button>
+                <button type="button" class="answer-btn" data-question="4" data-difficulty="2" data-answer="C" id="Boton42C">Narya</button>
+                <button type="button" class="answer-btn" data-question="4" data-difficulty="2" data-answer="D" id="Boton42D">Annatar</button>
+                <button type="button" class="next-btn" data-current="Pregunta24" data-next="Pregunta25" id="next42" class="dsn">Next</button>
+            </div>
+        </div>
+
+        <!-- 5th Question -->
+        <div class="col-12" id="Pregunta25" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 5/10 <strong>Score</strong> <span id="Puntaje52">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>Who was the first King of Gondor?</h2>
+                </div>
+                <button type="button" class="answer-btn" data-question="5" data-difficulty="2" data-answer="A" id="Boton52A">Isildur</button>
+                <button type="button" class="answer-btn" data-question="5" data-difficulty="2" data-answer="B" id="Boton52B">Anárion</button>
+                <button type="button" class="answer-btn" data-question="5" data-difficulty="2" data-answer="C" id="Boton52C">Elendil</button>
+                <button type="button" class="answer-btn" data-question="5" data-difficulty="2" data-answer="D" id="Boton52D">Meneldil</button>
+                <button type="button" class="next-btn" data-current="Pregunta25" data-next="Pregunta26" id="next52" class="dsn">Next</button>
+            </div>
+        </div>
+
+        <!-- 6th Question -->
+        <div class="col-12" id="Pregunta26" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 6/10 <strong>Score</strong> <span id="Puntaje62">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>What was the name of the giant spider that attacked Frodo in Cirith Ungol?</h2>
+                </div>
+                <button type="button" class="answer-btn" data-question="6" data-difficulty="2" data-answer="A" id="Boton62A">Ungoliant</button>
+                <button type="button" class="answer-btn" data-question="6" data-difficulty="2" data-answer="B" id="Boton62B">Shelob</button>
+                <button type="button" class="answer-btn" data-question="6" data-difficulty="2" data-answer="C" id="Boton62C">Gothmog</button>
+                <button type="button" class="answer-btn" data-question="6" data-difficulty="2" data-answer="D" id="Boton62D">Aranea</button>
+                <button type="button" class="next-btn" data-current="Pregunta26" data-next="Pregunta27" id="next62" class="dsn">Next</button>
+            </div>
+        </div>
+
+        <!-- 7th Question -->
+        <div class="col-12" id="Pregunta27" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 7/10 <strong>Score</strong> <span id="Puntaje72">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>Which race does Treebeard belong to?</h2>
+                </div>
+                <button type="button" class="answer-btn" data-question="7" data-difficulty="2" data-answer="A" id="Boton72A">Maiar</button>
+                <button type="button" class="answer-btn" data-question="7" data-difficulty="2" data-answer="B" id="Boton72B">Valar</button>
+                <button type="button" class="answer-btn" data-question="7" data-difficulty="2" data-answer="C" id="Boton72C">Ents</button>
+                <button type="button" class="answer-btn" data-question="7" data-difficulty="2" data-answer="D" id="Boton72D">Trolls</button>
+                <button type="button" class="next-btn" data-current="Pregunta27" data-next="Pregunta28" id="next72" class="dsn">Next</button>
+            </div>
+        </div>
+
+        <!-- 8th to 10th Question -->
+        <div class="col-12" id="Pregunta28" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 8/10 <strong>Score</strong> <span id="Puntaje82">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>What is the name of the river that forms the western border of Mordor?</h2>
+                </div>
+                <button type="button" class="answer-btn" data-question="8" data-difficulty="2" data-answer="A" id="Boton82A">Anduin</button>
+                <button type="button" class="answer-btn" data-question="8" data-difficulty="2" data-answer="B" id="Boton82B">Isen</button>
+                <button type="button" class="answer-btn" data-question="8" data-difficulty="2" data-answer="C" id="Boton82C">Nurnen</button>
+                <button type="button" class="answer-btn" data-question="8" data-difficulty="2" data-answer="D" id="Boton82D">Poros</button>
+                <button type="button" class="next-btn" data-current="Pregunta28" data-next="Pregunta29" id="next82" class="dsn">Next</button>
+            </div>
+        </div>
+        <!-- 9th Question -->
+        <div class="col-12" id="Pregunta29" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 9/10 <strong>Score</strong> <span id="Puntaje92">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>What was the name of the sword that Aragorn wielded after it was reforged?</h2>
+                </div>
+                <button type="button" class="answer-btn" data-question="9" data-difficulty="2" data-answer="A" id="Boton92A">Andúril</button>
+                <button type="button" class="answer-btn" data-question="9" data-difficulty="2" data-answer="B" id="Boton92B">Glamdring</button>
+                <button type="button" class="answer-btn" data-question="9" data-difficulty="2" data-answer="C" id="Boton92C">Sting</button>
+                <button type="button" class="answer-btn" data-question="9" data-difficulty="2" data-answer="D" id="Boton92D">Orcrist</button>
+                <button type="button" class="next-btn" data-current="Pregunta29" data-next="Pregunta30" id="next92" class="dsn">Next</button>
+            </div>
+        </div>
+        <!-- 10th Question -->
+        <div class="col-12" id="Pregunta30" class="dsn">
+            <div class="col-6 Pregunta">
+                <div class="col-12">
+                    <span class="score">Question 10/10 <strong>Score</strong> <span id="Puntaje102">0</span></span>
+                </div>
+                <h1><a class="nav-link" href="index.html">Lord of the Rings Quiz</a></h1>
+                <div class="col-sm-12">
+                    <h2>What is the name of Sauron's fortress in Mordor?</h2>
+                </div>
+                <button type="button" class="answer-btn" data-question="10" data-difficulty="2" data-answer="A" id="Boton102A">Dol Guldur</button>
+                <button type="button" class="answer-btn" data-question="10" data-difficulty="2" data-answer="B" id="Boton102B">Angband</button>
+                <button type="button" class="answer-btn" data-question="10" data-difficulty="2" data-answer="C" id="Boton102C">Barad-dûr</button>
+                <button type="button" class="answer-btn" data-question="10" data-difficulty="2" data-answer="D" id="Boton102D">Orthanc</button>
+                <button type="button" class="next-btn" data-current="Pregunta30" id="finish-quiz" class="dsn">Finish</button>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="col-12 dsn" id="Final">
+        <div class="col-12">
+            <div class="col-6 Pregunta">
+                <h2 style="font-size: 32px;">Your final score was <strong id="puntajeFinal"></strong></h2>
+                <div class="col-sm-12">
+                    <h2>Congratulations on completing the quiz!</h2>
+                    <h2>Enter the participant's name <br />and save your information.</h2>
+                </div>
+                <input class="btn-primary" id="nombre" style="background: #fff; color: #333; text-align: center;" placeholder="Name" />
+                <button type="button" id="send-btn" class="btn btn-circle btn-primary">Send</button>
+                <button type="button" id="play-again-btn" class="btn btn-circle btn-primary" >Play again</button>
+                <button type="button" id="high-scores-btn" class="btn btn-circle btn-primary" >High Scores</button>
+
+                
+            </div>
+        </div>
+    </div>    
 
     </div>
 </body>
