@@ -4,9 +4,13 @@ body {
     background-size: cover;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Cormorant Unicase", sans-serif;
 }
-
+a {
+    font-family: "Cormorant Unicase", sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
 /* Centering the content */
 .container {
     position: relative;
@@ -27,6 +31,7 @@ body {
     font-size: 2rem;  
     color: #fff;
     margin-bottom: 20px;
+    font-family: "Cormorant Unicase", sans-serif;
 }
 
 /* Title */
@@ -35,6 +40,7 @@ body {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 30px;
+    font-family: "Cormorant Unicase", sans-serif;
 }
 
 /* Quiz Questions */
@@ -47,12 +53,14 @@ body {
     padding: 20px;
     width: 80%;
     text-align: center;
+    font-family: "Cormorant Unicase", sans-serif;
 }
 
 .Pregunta h2 {
     color: #fff;
     font-size: 1.8rem;
     font-weight: 500;
+    font-family: "Cormorant Unicase", sans-serif;
 }
 
 /* Buttons */
@@ -68,6 +76,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     border: none;
+    font-family: "Cormorant Unicase", sans-serif;
 }
 
 .btn-primary:hover {
@@ -82,12 +91,14 @@ body {
     font-weight: 400;
     text-align: right;
     color: white;
+    font-family: "Cormorant Unicase", sans-serif;
 }
 
 /* Next Button */
 .siguiente {
     background: #fff;
     color: #333;
+    font-family: "Cormorant Unicase", sans-serif;
 }
 
 .siguiente:hover {
@@ -166,6 +177,7 @@ body {
     width: 80%;
     max-width: 600px;
     text-align: center;
+    font-family: "Cormorant Unicase", sans-serif;
 }
 
 /* Style for the high score table */
@@ -182,6 +194,7 @@ body {
     padding: 12px;
     font-size: 18px;
     border: 1px solid white;
+    font-family: "Cormorant Unicase", sans-serif;
 }
 
 /* Table rows */
@@ -192,6 +205,7 @@ body {
     font-size: 16px;
     text-align: center;
     border: 1px solid white;
+    font-family: "Cormorant Unicase", sans-serif;
 }
 
 /* Buttons Styling */
