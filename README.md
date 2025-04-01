@@ -10,7 +10,7 @@ This Lord of the Rings Quiz was created to challenge fans, allowing them to test
 
 ---
 
-(![Am I Responsive photo of the page](amiresponsive.png))
+(![Am I Responsive photo of the page](../images/amiresponsive.png))
 
 Lord of the rings Website is live, to access it click [here](https://madlp345.github.io/Lord-of-the-Rings-Quiz/).
 
@@ -50,7 +50,7 @@ The Lord of the Rings Quiz was created for fans of J.R.R. Tolkien’s legendary 
 ## Design
 
 ### Color Scheme
-![Coolors Palette](../Lord-of-the-Rings-Quiz/assets/css/images/amiresponsive.png)
+![Coolors Palette](../images/coloors.png)
 
 As the pages of the site have a background image, the color scheme was kept minimal to avoid overwhelming users. White, and shades of grey create a minimalist aesthetic, ensuring readability and contrast.
 
@@ -66,7 +66,10 @@ As the website is a quiz based on the Middle-earth, I wanted to use one of the a
 
 ### Wireframes
 Wireframes were created for mobile, tablet and desktop using balsamiq.
-![Menu](images/)
+(../images/balsamiq.jpg)
+(../images/balsamiq2.jpg)
+(../images/balsamiq3.jpg)
+(../images/balsamiq4.jpg)
 
 ---
 
