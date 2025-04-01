@@ -7,13 +7,12 @@
     <meta name="keywords" content="LOTR quiz, quiz game, online quiz game, general knowledge fiction quiz, online LOTR quiz, Lord of the Rings quiz" />
     <meta http-equiv="content-type" content="text/html">
     <!-- Sets the favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
     <!-- Links CSS  -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <!-- Imports jQuery library -->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
     <!-- Links the JavaScript -->
-    <script defer src="assets/js/script.js"></script>
     <!-- Imports SweetAlert2 library -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--- Font import-->
@@ -40,26 +39,7 @@
                     </div>
                 </div>
 
-        <div class="col-12" id="finish_quiz" style="min-width: 90%;">
-        <div class="col-12">
-            <div class="col-6 Pregunta">
-                <h2 style="font-size: 32px;">Your final score was <strong id="puntajeFinal"></strong></h2>
-                <div class="col-sm-12">
-                    <h2>Congratulations on completing the quiz!</h2>
-                    <h2>Enter the participant's name <br />and save your information.</h2>
-                </div>
-                        <input class="btn-primary" id="nombre" style="background: #fff; color: #333; text-align: center;" placeholder="Name" />
-                        <button type="button" id="send-btn" class="btn btn-circle btn-primary">Send</button>
-                        <button type="button" id="play-again-btn" class="btn btn-circle btn-primary" >Play again</button>
-                        <button type="button" id="high-scores-btn" class="btn btn-circle btn-primary" >High Scores</button>
-
-                
-            </div>
-        </div>
-    </div> 
-        
-
-
+ 
 
         <!--Start of easy quiz-->
         <div class="col-12 dsn" id="from1" style=" min-width: 90%" >
@@ -409,7 +389,7 @@
                 <button type="button" class="answer-btn btn btn-circle btn-primary" data-question="9" data-easy-diff="2" data-answer="B" id="92B">Glamdring</button>
                 <button type="button" class="answer-btn btn btn-circle btn-primary" data-question="9" data-easy-diff="2" data-answer="C" id="92C">Sting</button>
                 <button type="button" class="answer-btn btn btn-circle btn-primary" data-question="9" data-easy-diff="2" data-answer="D" id="92D">Orcrist</button>
-                <button type="button" class="next-btn btn btn-circle btn-primary" data-current="Pregunta29" data-next="Pregunta30" id="next92" class="dsn">Next</button>
+                <button type="button" class="next-btn btn btn-circle btn-primary" data-current="Pregunta29" data-next="Pregunta210" id="next92" class="dsn">Next</button>
             </div>
         </div>
         <!-- 10th Question -->
@@ -426,16 +406,29 @@
                 <button type="button" class="answer-btn btn btn-circle btn-primary" data-question="10" data-easy-diff="2" data-answer="B" id="102B">Angband</button>
                 <button type="button" class="answer-btn btn btn-circle btn-primary" data-question="10" data-easy-diff="2" data-answer="C" id="102C">Barad-dûr</button>
                 <button type="button" class="answer-btn btn btn-circle btn-primary" data-question="10" data-easy-diff="2" data-answer="D" id="102D">Orthanc</button>
-                <button type="button" class="next-btn btn btn-circle btn-primary" data-current="from2" id="finish_quiz" class="dsn">Finish</button>
-            </div>
+                                              <button class="next-btn btn btn-circle btn-primary" data-current="from2" data-next="finish_quiz" class="dsn">Next</button>
+           </div>
         </div>
         
 
      </div>
     
-
-   
+    <div class="col-12" id="finish_quiz" style="min-width: 90%;">
+        <div class="col-12">
+        <div class="col-6 Pregunta">
+            <h2 style="font-size: 32px;">Your final score was <strong id="puntajeFinal"></strong></h2>
+        <div class="col-sm-12">
+            <h2>Congratulations on completing the quiz!</h2>
+            <h2>Enter the participant's name <br />and save your information.</h2>
+        </div>
+        <input class="btn-primary" id="nombre" style="background: #fff; color: #333; text-align: center;" placeholder="Name" />
+        <button type="button" id="send-btn" class="btn btn-circle btn-primary">Send</button>
+        <button type="button" id="play-again-btn" class="btn btn-circle btn-primary" >Play again</button>
+        <button type="button" id="high-scores-btn" class="btn btn-circle btn-primary" >High Scores</button> 
+        </div>
+        </div>
+    </div>  
     </div>
-     
+       <script src="../assets/js/script.js" defer></script>
 </body>
 </html>

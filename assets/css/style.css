@@ -1,11 +1,11 @@
 /* General Styles */
 body {
-    background: url("../door-stretching-into-fantasy-world.png") no-repeat center center fixed;
+    background: url(../images/door-stretching-into-fantasy-world.jpg) no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
     font-family: "Cormorant Unicase", sans-serif;
-  }
+}
 a {
     font-family: "Cormorant Unicase", sans-serif;
     color: #fff;

@@ -4,6 +4,8 @@ var respuestas_dificil = ['', 'C', 'A', 'B', 'A', 'B', 'A', 'C', 'B', 'C', 'B'];
 var score = 0;
 const easyDiffBtn = document.getElementById("easy-diff");
 const hardDiffBtn = document.getElementById("hard-diff");
+const send_btn = document.getElementById("send-btn");
+
 const answerbtn = $(".answer-btn");
 // Difficulty selection
 easyDiffBtn.addEventListener("click", () => {
@@ -12,6 +14,20 @@ easyDiffBtn.addEventListener("click", () => {
 hardDiffBtn.addEventListener("click", () => {
     next('Pregunta0', 'from2');
 });
+
+send_btn.addEventListener("click", () => {
+   if (document.getElementById("nombre").value==""){
+                Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Field name is required!" 
+                }); 
+    document.getElementById("nombre").focus();
+   }else{
+    location.href="highscores.html?name="+document.getElementById("nombre").value+"&score="+document.getElementById("puntajeFinal").innerHTML;
+   }  
+});
+
 $("#from1").on("click", ".answer-btn", function() {
                 let eventos = $(this);  
                 var question=eventos[0]['attributes']['data-question']['value'];
@@ -39,8 +55,19 @@ $("#from1").on("click", ".answer-btn", function() {
               var s=eventos[0]['attributes']['data-next']['value'];
              next(a, s);
 });
+
+ $("#play-again-btn").on("click", function() {
+          volver();      
+});
+
+
+ $("#high-scores-btn").on("click", function() {
+           location.href="./highscores.html";   
+});
+
+
+
 function next(a, s) {
-  
     document.getElementById(a).style.display = "none";
     document.getElementById(s).style.display = "block";
 }
@@ -55,15 +82,20 @@ function Respuesta(pregunta, dificultad, opcionSeleccionada,eventos) {
           document.getElementById(pregunta+""+dificultad+""+respuestaCorrecta).style.backgroundColor = "rgba(108,166,10,0.7)";
     } 
         quitar_evento(pregunta,dificultad);
+        
         $("#Pregunta"+dificultad+""+pregunta+" .next-btn").css( {"visibility":"visible"});   
+        
+        
         document.getElementById("Puntaje"+dificultad+""+pregunta).innerHTML = score;
-        if (pregunta === "10") {
+        if (pregunta === "10") { 
              document.getElementById("puntajeFinal").innerHTML= score; 
         }else{
             pregunta++;
             document.getElementById("Puntaje"+dificultad+""+pregunta).innerHTML = score; 
         }
 }
+
+
 function quitar_evento(pregunta,dificultad){ 
   $("#Pregunta"+dificultad+""+pregunta+" .answer-btn").attr( "disabled", true);   
   $("#Pregunta"+dificultad+""+pregunta+" .answer-btn").css( {"cursor":"no-drop"});     

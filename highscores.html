@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Sets the favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
     <!-- Links CSS  -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <!-- Imports jQuery library -->
-    <script src="js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
     <!-- Links the JavaScript -->
-    <script src="js/script.js"></script>
+     
     <!-- Imports SweetAlert2 library -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--- Font import-->
@@ -21,29 +21,93 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>High Scores Quiz</title>
 </head>
-    <body>    
+    <body>   
+    <script>
+    
+    
+    function carga_data(nombre,puntaje){
+        
+        if (puntaje==null){}else{
+        // Get existing scores from localStorage
+        
+                let scores = JSON.parse(localStorage.getItem("highscores")) || [];
+            
+                // Add new score
+                scores.push({ nombre, puntaje });
+            
+                // Save updated scores back to localStorage
+                localStorage.setItem("highscores", JSON.stringify(scores));
+      }
+      CargarScores();
+        
+    }
+   
+   function CargarScores() {
+    let scores = JSON.parse(localStorage.getItem("highscores")) || [];
+    let tbody = document.querySelector("#tablaPuntajes tbody");
+    tbody.innerHTML = "";
+
+    scores.forEach((score, index) => {
+        let row = tbody.insertRow();
+        row.insertCell(0).textContent = index + 1;
+        row.insertCell(1).textContent = score.nombre;
+        row.insertCell(2).textContent = score.puntaje;
+    });
+}
+    
+// Load high scores
+function clearScores() {
+    localStorage.removeItem("highscores");
+    CargarScores();
+}
+
+// Clear scores
+ 
+
+    </script>
+    
+     
         <div class="container">
             <h1 class="how-to-play">🏆 High Scores 🏆</h1>
 
             <div class="highscores-box">
                 <table id="tablaPuntajes">
+                     
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Score</th>
+                            <th  >name</th>
+                            <th  >score</th>
                         </tr>
                     </thead>
+                    
+                    <tbody>
+              
+                    
+                    </tbody>
+                    
+                    
+                    
                     <tbody>
                         <!-- Scores will be inserted here -->
                     </tbody>
                 </table>
 
-                <div class="button-group">
-                    <button class="btn-primary" onclick="clearScores()">Clear Scores</button>
+               <div class="col-12" style="padding-top: 30px;">
+                <button class="btn-primary" onclick="clearScores()">Clear Scores</button><br /> 
                     <button class="btn-primary" onclick="window.location.href='index.html'">Go Back</button>
-                </div>
+               </div>
             </div>
         </div>
     </body>
 </html>
+
+<script>
+
+jQuery(document).ready(function() {    
+      	const name = new URLSearchParams(window.location.search).get('name'); 
+    	const score = new URLSearchParams(window.location.search).get('score');  
+       carga_data(name,score);
+        
+        });   
+</script>
