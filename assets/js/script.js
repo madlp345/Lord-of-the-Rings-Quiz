@@ -1,6 +1,6 @@
 var list_respuesta = ['A', 'B', 'C', 'D'];
-var respuestas_facil = ['', 'B', 'D', 'A', 'B', 'C', 'B', 'D', 'B', 'C', 'D'];                       
-var respuestas_dificil = ['', 'C', 'A', 'B', 'A', 'B', 'A', 'C', 'B', 'C', 'B'];                    
+var respuestas_facil = ['', 'B', 'D', 'A', 'A', 'C', 'B', 'B', 'B', 'C', 'D'];                       
+var respuestas_dificil = ['', 'C', 'A', 'B', 'A', 'C', 'B', 'C', 'A', 'A', 'C'];                    
 var score = 0;
 const easyDiffBtn = document.getElementById("easy-diff");
 const hardDiffBtn = document.getElementById("hard-diff");
@@ -146,7 +146,14 @@ function Enviar() {
 function loadScores() {
     let scores = JSON.parse(localStorage.getItem("highscores")) || [];
     let tbody = document.querySelector("#tablaPuntajes tbody");
-    tbody.innerHTML = "";
+
+    // Check if tbody exists before trying to modify it
+    if (!tbody) {
+        console.error("Error: tbody not found. Ensure there is a <table id='tablaPuntajes'><tbody></tbody></table> in your HTML.");
+        return;
+    }
+
+    tbody.innerHTML = ""; // Clear previous scores
 
     scores.forEach((score, index) => {
         let row = tbody.insertRow();
