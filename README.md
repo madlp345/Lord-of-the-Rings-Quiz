@@ -82,7 +82,8 @@ The website is comprised of a home page that also works as the game page and a h
 ![Blocked cursor](assets/images/balsamiq4.jpg)
 
 -The Home Page
-The home page of The Quiz Arms displays the sites name as a title and then a container which holds some welcome text, including alerting the users that they can navigate back to the home page at any time by clicking on the page name. Below this are three buttons, how to play, play and high scores.
+The home page of the Lord of the Rings Quiz a container which holds the title and explains the visitor how to play. Below this are two buttons easy difficulty and hard difficulty.
+![Am I Responsive](assets/images/balsamiq4.jpg)
 ### Existing Features
 
 
