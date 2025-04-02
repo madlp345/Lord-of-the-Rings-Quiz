@@ -10,7 +10,7 @@ This Lord of the Rings Quiz was created to challenge fans, allowing them to test
 
 ---
 
-(![Am I Responsive photo of the page](../images/amiresponsive.png))
+(![Am I Responsive photo of the page](assets/images/amiresponsive.png))
 
 Lord of the rings Website is live, to access it click [here](https://madlp345.github.io/Lord-of-the-Rings-Quiz/).
 
@@ -50,7 +50,7 @@ The Lord of the Rings Quiz was created for fans of J.R.R. Tolkien’s legendary 
 ## Design
 
 ### Color Scheme
-![Coolors Palette](../images/coloors.png)
+![Coolors Palette](assets/images/coloors.png)
 
 As the pages of the site have a background image, the color scheme was kept minimal to avoid overwhelming users. White, and shades of grey create a minimalist aesthetic, ensuring readability and contrast.
 
@@ -66,15 +66,23 @@ As the website is a quiz based on the Middle-earth, I wanted to use one of the a
 
 ### Wireframes
 Wireframes were created for mobile, tablet and desktop using balsamiq.
-(../images/balsamiq.jpg)
-(../images/balsamiq2.jpg)
-(../images/balsamiq3.jpg)
-(../images/balsamiq4.jpg)
+![Balsamiq](assets/images/balsamiq.jpg)
+![Balsamiq](assets/images/balsamiq2.jpg)
+![Balsamiq](assets/images/balsamiq3.jpg)
+![Balsamiq](assets/images/balsamiq4.jpg)
 
 ---
 
 ## Features
 
+The website is comprised of a home page that also works as the game page and a high score page.
+- A favicon in the browser
+![favicon](assets/images/balsamiq4.jpg)
+-Every page will display a custom cursor after you answer a question.
+![Blocked cursor](assets/images/balsamiq4.jpg)
+
+-The Home Page
+The home page of The Quiz Arms displays the sites name as a title and then a container which holds some welcome text, including alerting the users that they can navigate back to the home page at any time by clicking on the page name. Below this are three buttons, how to play, play and high scores.
 ### Existing Features
 
 
