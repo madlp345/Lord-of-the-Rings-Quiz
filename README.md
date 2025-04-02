@@ -77,18 +77,22 @@ Wireframes were created for mobile, tablet and desktop using balsamiq.
 
 The website is comprised of a home page that also works as the game page and a high score page.
 - A favicon in the browser
-![favicon](assets/images/balsamiq4.jpg)
--Every page will display a custom cursor after you answer a question.
-![Blocked cursor](assets/images/amiresponsive.png)
+![favicon](assets/images/balsamiq4.jpg)<br>
 
+-Every page will display a custom cursor after you answer a question.<br>
+
+![Blocked cursor](assets/images/faviconp.png)<br>
 - The Home Page
 The home page of the Lord of the Rings Quiz a container which holds the title and explains the visitor how to play. Below this are two buttons easy difficulty and hard difficulty.
-![Am I Responsive](assets/images/quizstart.png)
+
+![Am I Responsive](assets/images/quizstart.png)<br>
 Once the user has selected their difficulty they will then be shown the quiz area. The quiz area contains the question and the 4 answer choices.
+
 - The Game Page
-![Am I Responsive](assets/images/answerselect.png)
+![Am I Responsive](assets/images/answerselect.png)<br>
 When a user selects an answer, they will then be prevented from selecting any more answers and icon will appear. The quiz area border and the button selected will change styles depending on whether the answer selected was correct or incorrect. If the answer selected was correct, the score counter will add 10 to the score total. When the user clicks the next button the question counter will increase by 1. If the user selects the wrong answer, the button selected will display red, and the correct answer will display as green. Also when the user answer selects an answer the next button will appear.
-- End of the Quiz
+
+- End of the Quiz<br>
 ![Am I Responsive](assets/images/sweetalert.png)
 Once a user has answered the 10 questions they will be taken to the end of the game which will allow them to enter their name and submit the result will be entered onto the high scores page. The send button checks if there is a name, if there isn´t any info a Sweet Alert pop up message will alert the user that is needed to fill the name.
 
@@ -110,9 +114,10 @@ In future implementations I would like to:
 ---
 
 ### Validator Testing
-- **HTML Validator**: The error "Duplicate attribute class" means that in your HTML code, some elements (likely <button> elements) have multiple class attributes defined on the same tag, which is not allowed in HTML but is used to over pass the other previous classes.
+- **HTML Validator**: The error "Duplicate attribute class" means that in your HTML code, some elements (likely <button> elements) have multiple class attributes defined on the same tag, which is not allowed in HTML but is used to over pass the other previous classes.<br>
 ![dsnerror](assets/images/dsnerror.png)
-- **CSS Validator**:  Passed all checks.
+- **CSS Validator**:  Passed all checks.<br>
+
 ![W3C](assets/images/w3c.png)
 - **Lighthouse Accessibility Score**: Page has good performance and accessibility<br>
 ![Lighthouse](assets/images/lighthouse.png)
@@ -139,7 +144,7 @@ The following table outlines the manual testing performed for the portfolio webs
 
 
 ### Unfixed Bugs
-![unfixed](assets/images/unfixedbug.png)
+![unfixed](assets/images/unfixedbug.png)<br>
 The error indicates that the code is expecting a <tbody> element within a table with the ID tablaPuntajes. Since the element is created dynamically, it will be null until a score is loaded.
 
 ---
@@ -206,6 +211,6 @@ These resources helped me effectively implement key functionalities in the quiz 
 ## Acknowledgments
 
 - **Jubril Akolade** My Code Institute Mentor.
--  **[Oscar Nain Borja Cruz]**(https://co.linkedin.com/in/oscar-borja-stts) - He is one of my parents best friend and he took the time to walk through my code with me when I was struggling with adding event listeners.
+-  [Oscar Nain Borja Cruz](https://co.linkedin.com/in/oscar-borja-stts) - He is one of my parents best friend and he took the time to walk through my code with me when I was struggling with adding event listeners.
 - **The Code Institute Slack channel Peer Code Review** - There were similar cases from the ones I was facing. 
 ---
