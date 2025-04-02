@@ -77,11 +77,10 @@ Wireframes were created for mobile, tablet and desktop using balsamiq.
 
 The website is comprised of a home page that also works as the game page and a high score page.
 - A favicon in the browser
-![favicon](assets/images/balsamiq4.jpg)<br>
+![favicon](assets/images/faviconp.jpg)<br>
 
 -Every page will display a custom cursor after you answer a question.<br>
 
-![Blocked cursor](assets/images/faviconp.png)<br>
 - The Home Page
 The home page of the Lord of the Rings Quiz a container which holds the title and explains the visitor how to play. Below this are two buttons easy difficulty and hard difficulty.
 
@@ -92,8 +91,8 @@ Once the user has selected their difficulty they will then be shown the quiz are
 ![Am I Responsive](assets/images/answerselect.png)<br>
 When a user selects an answer, they will then be prevented from selecting any more answers and icon will appear. The quiz area border and the button selected will change styles depending on whether the answer selected was correct or incorrect. If the answer selected was correct, the score counter will add 10 to the score total. When the user clicks the next button the question counter will increase by 1. If the user selects the wrong answer, the button selected will display red, and the correct answer will display as green. Also when the user answer selects an answer the next button will appear.
 
-- End of the Quiz<br>
-![Am I Responsive](assets/images/sweetalert.png)
+- End of the Quiz
+![Am I Responsive](assets/images/sweetalert.png)<br>
 Once a user has answered the 10 questions they will be taken to the end of the game which will allow them to enter their name and submit the result will be entered onto the high scores page. The send button checks if there is a name, if there isn´t any info a Sweet Alert pop up message will alert the user that is needed to fill the name.
 
 ---
