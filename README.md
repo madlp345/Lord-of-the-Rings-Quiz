@@ -94,6 +94,9 @@ When a user selects an answer, they will then be prevented from selecting any mo
 - End of the Quiz
 ![Am I Responsive](assets/images/sweetalert.png)<br>
 Once a user has answered the 10 questions they will be taken to the end of the game which will allow them to enter their name and submit the result will be entered onto the high scores page. The send button checks if there is a name, if there isn´t any info a Sweet Alert pop up message will alert the user that is needed to fill the name.
+- High Scores page
+![Am I Responsive](assets/images/highscores.png)<br>
+Once the user submits their score, they will be redirected to the High Scores page. Here, they can view the leaderboard and have the option to clear all saved scores.
 
 ---
 
@@ -201,7 +204,7 @@ The following YouTube tutorials were instrumental in developing various features
   Since the API used for the quiz provided a separate correct answer along with an array of incorrect answers, I needed to shuffle the answers so the correct one wouldn’t always appear in the same position. My research led me to the **Fisher-Yates Shuffle**, which ensures an even probability distribution. I adapted the method using insights from [this tutorial](https://www.youtube.com/watch?app=desktop&v=k8yJCeuP6I8&t=0s).  
 
 * **Local Storage for High Scores:**  
-  The Code Institute Diploma’s JavaScript modules did not cover local storage, so I researched how to store and retrieve high scores myself. I followed [this tutorial](https://www.youtube.com/watch?v=PDzB2hI0esQ) to learn how to:  
+  I didn´t felt confident using local storage, so I researched how to store and retrieve high scores myself. I followed [this tutorial](https://www.youtube.com/watch?v=PDzB2hI0esQ) to learn how to:  
   - Save player names and scores into an array stored in local storage.  
   - Sort the scores in descending order.  
   - Use a predefined maximum number of scores (e.g., `MAX_HIGH_SCORES`) to limit the stored data.  
@@ -211,5 +214,5 @@ These resources helped me effectively implement key functionalities in the quiz 
 
 - **Jubril Akolade** My Code Institute Mentor.
 -  [Oscar Nain Borja Cruz](https://co.linkedin.com/in/oscar-borja-stts) - He is one of my parents best friend and he took the time to walk through my code with me when I was struggling with adding event listeners.
-- **The Code Institute Slack channel Peer Code Review** - There were similar cases from the ones I was facing. 
+- **The Code Institute Slack channel Peer Code Review** - There were similar cases from the ones I was facing and the community always tried to help.
 ---
